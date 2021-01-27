@@ -55,11 +55,11 @@ Y luego otro para web2 llamado **web2.conf** con el siguiente contenido.
 
 **Añadir imagen 15**
 
-* La directiva server_name especifica el dominio al que asocia el sitio virtual
-* La ruta del contenido web se indica en la directiva root
-* En la directiva index especificamos los nombres de archivos que son considerados índice
-* En el bloque Location aplicamos configuraciones concretas dentro de la ruta del contenido web. Con la directiva try fules indicamos que debe resolver la url como archivo, si falla como directorio y por ultimo con el error 404
-* Las dos últimas directivas hacen referencia a los eventos de acceso y errores
+* La directiva server_name especifica el dominio al que asocia el sitio virtual.
+* La ruta del contenido web se indica en la directiva root.
+* En la directiva index especificamos los nombres de archivos que son considerados índice.
+* En el bloque Location aplicamos configuraciones concretas dentro de la ruta del contenido web. Con la directiva try fules indicamos que debe resolver la url como archivo, si falla como directorio y por ultimo con el error 404.
+* Las dos últimas directivas hacen referencia a los eventos de acceso y errores.
 
 Por último tenemos que crear un enlace simbólico dentro de sites-enabled para que los sitios se activen, ya que ahora mismo solo están disponibles.
 

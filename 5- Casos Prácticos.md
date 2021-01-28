@@ -72,3 +72,17 @@ Y recargamos nginx.
 Ahora, desde un cliente configurando el archivo */etc/hosts* (ya que estamos trabajando en entorno local), realizamos la comprobación desde el navegador.
 
 **Añadir imagen 19,20 y 21**
+
+4.- Voy a dejar accesible web1 desde externa e interna, pero web2 va a ser accesible solo desde la red interna.
+
+Para ello, me voy al archivo /etc/nginx/sites-available/web2.conf, y en la directiva location, voy a añadir las siguientes líneas.
+
+**Añadir imagen 22**
+
+Luego de esto, realizamos un systemctl restart nginx
+
+Y ahora comprobamos desde 2 clientes, uno mediante la red que tiene acceso a internet y la otra que solo tiene acceso a la red local.
+
+**Añadir imagen 23**
+
+Cliente01 tiene ip 192.168.3.x y cliente02 tiene ip 192.168.2.x

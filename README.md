@@ -1,13 +1,13 @@
 <h1><p align=center> Índice </p></h1>
 
-<h2><p align=center> 1.- [Introducción](https://github.com/Ianfernandez09/nginx/blob/main/1.-%20Introducción.md) </p></h2>
+## 1.- [Introducción](https://github.com/Ianfernandez09/nginx/blob/main/1.-%20Introducción.md)
 
-<h2><p align=center> 2.- [Comparativa con Apache](https://github.com/Ianfernandez09/nginx/blob/main/2-%20Comparativa%20con%20Apache2.md) </p></h2>
+## 2.- [Comparativa con Apache](https://github.com/Ianfernandez09/nginx/blob/main/2-%20Comparativa%20con%20Apache2.md)
 
-<h2><p align=center> 3.- [Esquema de Red](https://github.com/Ianfernandez09/nginx/blob/main/3-%20Esquema%20de%20Red.PNG) </p></h2>
+## 3.- [Esquema de Red](https://github.com/Ianfernandez09/nginx/blob/main/3-%20Esquema%20de%20Red.PNG)
 
-<h2><p align=center> 4.- [Instalación](https://github.com/Ianfernandez09/nginx/blob/main/4-%20Instalación.md) </p></h2>
+## 4.- [Instalación](https://github.com/Ianfernandez09/nginx/blob/main/4-%20Instalación.md)
 
-<h2><p align=center> 5.- [Casos prácticos](https://github.com/Ianfernandez09/nginx/blob/main/5-%20Casos%20Prácticos.md) </p></h2>
+## 5.- [Casos prácticos](https://github.com/Ianfernandez09/nginx/blob/main/5-%20Casos%20Prácticos.md)
 
-<h2><p align=center> 6.- [Referencias]()
+## 6.- [Referencias]()

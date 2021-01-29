@@ -5,7 +5,7 @@
 
 # Servicio asociado
 
-**Añadir imagen 3**
+**Añadir imagen 3** ``` systemctl status nginx ```
 
 # Ficheros de configuración
 

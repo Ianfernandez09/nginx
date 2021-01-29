@@ -1,4 +1,4 @@
-## Instalación
+<h1><p align=center> Instalación </p></h1>
 Antes de nada, lo primero será actualizar la lista de paquetes.
 
 ``` apt update ```

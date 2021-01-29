@@ -15,7 +15,7 @@ Los ficheros de configuración se encuentran bajo la ruta /etc/nginx, siendo el 
 
 En **/etc/nginx/modules-enabled/** se encuentran los archivos de los módulos que se desean configurar.
 
-En **/etc/nginx/sites-enabled/** podemos ver los sitios virtuales que tenemos **activados** y en /etc/nginx/sites-available/ encontramos los **disponibles**.
+En **/etc/nginx/sites-enabled/** podemos ver los sitios virtuales que tenemos **activados** y en **/etc/nginx/sites-available/** encontramos los **disponibles**.
 
 En **/etc/nginx/conf.d/** podemos encontrar archivos de configuración adicionales.
 
@@ -35,15 +35,15 @@ Tendré 2 sitios web, uno llamado **www.web1.org (/var/www/web1)** y otro llamad
 
 Misma dirección IP y puerto, distintos dominios.
 
-1- Creamos las carpetas donde se alojarán las páginas de cada uno.
+**1-** Creamos las carpetas donde se alojarán las páginas de cada uno.
 
 **Añadir imagen 9**
 
-2- Creamos el index en cada una de las carpetas.
+**2-** Creamos el index en cada una de las carpetas.
 
 **Añadir imagenes 10,11,12 y 13**
 
-3- Configuramos los nuevos sitios.
+**3-** Configuramos los nuevos sitios.
 
 Para ello, nos dirigimos al directorio **/etc/nginx/sites-available/**.
 

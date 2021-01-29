@@ -1,6 +1,6 @@
-<p align=center> # Casos Prácticos </p>
+<h1><p align=center> # Casos Prácticos </p></h1>
 
-## Versión de Nginx Instalado
+# Versión de Nginx Instalado
 
 **Añadir imagen 4**
 

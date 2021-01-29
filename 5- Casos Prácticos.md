@@ -75,7 +75,7 @@ Ahora, desde un cliente configurando el archivo */etc/hosts* (ya que estamos tra
 
 ## Autenticación, Autorización y Control de Acceso
 
-**Voy a dejar accesible web1 desde externa e interna, pero web2 va a ser accesible solo desde la red interna.**
+# Voy a dejar accesible web1 desde externa e interna, pero web2 va a ser accesible solo desde la red interna.
 
 Para ello, me voy al archivo /etc/nginx/sites-available/web2.conf, y en la directiva location, voy a añadir las siguientes líneas.
 
@@ -89,7 +89,7 @@ Y ahora comprobamos desde 2 clientes, uno mediante la red que tiene acceso a int
 
 Cliente01 tiene ip 192.168.3.x y cliente02 tiene ip 192.168.2.x
 
-** Web1 va a contener un directorio privado, con autenticación básica y solo pueden acceder usuarios válidos**
+# Web1 va a contener un directorio privado, con autenticación básica y solo pueden acceder usuarios válidos
 
 Para ello, primero voy a crear un directorio dentro de la carpeta contenedora de la página de web1.
 
@@ -121,7 +121,7 @@ Si ponemos el usuario y la contraseña adecuada.
 
 **Añadir imagen 30 y 31**
 
-**A través de la red interna no pide autenticación para entrar a www.web1.org/privado, pero a través de la red pública sí.**
+# A través de la red interna no pide autenticación para entrar a www.web1.org/privado, pero a través de la red pública sí.
 
 Editamos el fichero web1.conf y añadimos las siguientes líneas.
 
@@ -137,7 +137,7 @@ Pero desde un equipo de la red interna, nos deja acceder directamente.
 
 **Añadir imagen 34**
 
-**Configurar el sitio virtual www.web1.org con acceso seguro**
+# Configurar el sitio virtual www.web1.org con acceso seguro
 
 Para ello, primero crearemos los certificados, en mi caso voy a usar **openssl**, ejecutamos el siguiente comando.
 

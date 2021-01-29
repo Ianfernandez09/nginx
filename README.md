@@ -1,4 +1,5 @@
 <h1><p align=center> Índice </p></h1>
+
 ## 1.- [Introducción](https://github.com/Ianfernandez09/nginx/blob/main/1.-%20Introducción.md)
 
 ## 2.- [Comparativa con Apache](https://github.com/Ianfernandez09/nginx/blob/main/2-%20Comparativa%20con%20Apache2.md)

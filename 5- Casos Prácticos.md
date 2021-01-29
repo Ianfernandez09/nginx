@@ -10,7 +10,7 @@
 
 # Ficheros de configuración
 
-Los ficheros de configuración se encuentran bajo la ruta /etc/nginx, siendo el archivo de configuración principal /etc/nginx/nginx.conf
+Los ficheros de configuración se encuentran bajo la ruta ```/etc/nginx```, siendo el archivo de configuración principal ```/etc/nginx/nginx.conf```
 
 **Añadir imagen 5**
 
@@ -41,6 +41,7 @@ Misma dirección IP y puerto, distintos dominios.
 **Añadir imagen 9**
 
 **2-** Creamos el index en cada una de las carpetas.
+
 ``` nano index.html ```
 
 **Añadir imagen 11**

@@ -1,11 +1,11 @@
-# Casos Prácticos
+<center> # Casos Prácticos </center>
 ## Versión de Nginx Instalado
 
 **Añadir imagen 4**
 
 # Servicio asociado
 
-**Añadir imagen 3** ``` systemctl status nginx ```
+``` systemctl status nginx ```
 
 # Ficheros de configuración
 

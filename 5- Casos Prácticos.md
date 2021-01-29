@@ -73,7 +73,7 @@ Ahora, desde un cliente configurando el archivo */etc/hosts* (ya que estamos tra
 
 **Añadir imagen 19,20 y 21**
 
-4.- Voy a dejar accesible web1 desde externa e interna, pero web2 va a ser accesible solo desde la red interna.
+**Voy a dejar accesible web1 desde externa e interna, pero web2 va a ser accesible solo desde la red interna.**
 
 Para ello, me voy al archivo /etc/nginx/sites-available/web2.conf, y en la directiva location, voy a añadir las siguientes líneas.
 
@@ -86,3 +86,12 @@ Y ahora comprobamos desde 2 clientes, uno mediante la red que tiene acceso a int
 **Añadir imagen 23**
 
 Cliente01 tiene ip 192.168.3.x y cliente02 tiene ip 192.168.2.x
+
+** Web1 va a contener un directorio privado, con autenticación básica y solo pueden acceder usuarios válidos**
+
+Para ello, primero voy a crear un directorio dentro de la carpeta contenedora de la página de web1.
+
+**Añadir imagen 24**
+
+Ahora editaremos el fichero de web1.conf.
+

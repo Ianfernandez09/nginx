@@ -1,4 +1,5 @@
 <h1><p align=center> Nginx vs Apache </p></h1>
+
 ## Seguridad
 En el sentido de la seguridad, ambos tienen buenas políticas de seguridad. Publican parches de seguridad con frecuencia para evitar ataques DDos.
 Tienen desarrollos bastante activos y tienen actualizaciones constantes.

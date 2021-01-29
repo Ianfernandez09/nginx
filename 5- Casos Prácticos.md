@@ -1,4 +1,4 @@
-<h1><p align=center> # Casos Prácticos </p></h1>
+<h1><p align=center> Casos Prácticos </p></h1>
 
 # Versión de Nginx Instalado
 
@@ -14,15 +14,15 @@ Los ficheros de configuración se encuentran bajo la ruta /etc/nginx, siendo el 
 
 **Añadir imagen 5**
 
-En **/etc/nginx/modules-enabled/** se encuentran los archivos de los módulos que se desean configurar.
+En ```/etc/nginx/modules-enabled/``` se encuentran los archivos de los módulos que se desean configurar.
 
-En **/etc/nginx/sites-enabled/** podemos ver los sitios virtuales que tenemos **activados** y en **/etc/nginx/sites-available/** encontramos los **disponibles**.
+En ```/etc/nginx/sites-enabled/``` podemos ver los sitios virtuales que tenemos **activados** y en ```/etc/nginx/sites-available/``` encontramos los **disponibles**.
 
-En **/etc/nginx/conf.d/** podemos encontrar archivos de configuración adicionales.
+En ```/etc/nginx/conf.d/``` podemos encontrar archivos de configuración adicionales.
 
 # Página web por defecto
 
-La página web por defecto, podemos encontrarla en **/var/www/html/**, donde podremos editar el archivo **index.html**.
+La página web por defecto, podemos encontrarla en ```/var/www/html/```, donde podremos editar el archivo **index.html**.
 
 **Añadir imagen 6**
 
@@ -32,7 +32,7 @@ La página web por defecto, podemos encontrarla en **/var/www/html/**, donde pod
 
 # Virtual Hosting
 
-Tendré 2 sitios web, uno llamado **www.web1.org (/var/www/web1)** y otro llamado **www.web2.org (/var/www/web2)**
+Tendré 2 sitios web, uno llamado **www.web1.org (```/var/www/web1```)** y otro llamado **www.web2.org (```/var/www/web2```)**
 
 Misma dirección IP y puerto, distintos dominios.
 
@@ -41,12 +41,17 @@ Misma dirección IP y puerto, distintos dominios.
 **Añadir imagen 9**
 
 **2-** Creamos el index en cada una de las carpetas.
+``` nano index.html ```
 
-**Añadir imagenes 10,11,12 y 13**
+**Añadir imagen 11**
+
+``` nano index.html ```
+
+**Añadir imagen 13**
 
 **3-** Configuramos los nuevos sitios.
 
-Para ello, nos dirigimos al directorio **/etc/nginx/sites-available/**.
+Para ello, nos dirigimos al directorio ```/etc/nginx/sites-available/```.
 
 Y creamos primero un archivo llamado **web1.conf** con el siguiente contenido.
 
@@ -70,7 +75,7 @@ Y recargamos nginx.
 
 **Añadir imagen 18**
 
-Ahora, desde un cliente configurando el archivo */etc/hosts* (ya que estamos trabajando en entorno local), realizamos la comprobación desde el navegador.
+Ahora, desde un cliente configurando el archivo ```/etc/hosts``` (ya que estamos trabajando en entorno local), realizamos la comprobación desde el navegador.
 
 **Añadir imagen 19,20 y 21**
 
@@ -78,7 +83,7 @@ Ahora, desde un cliente configurando el archivo */etc/hosts* (ya que estamos tra
 
 ## Voy a dejar accesible web1 desde externa e interna, pero web2 va a ser accesible solo desde la red interna.
 
-Para ello, me voy al archivo /etc/nginx/sites-available/web2.conf, y en la directiva location, voy a añadir las siguientes líneas.
+Para ello, me voy al archivo ```/etc/nginx/sites-available/web2.conf```, y en la directiva **location**, voy a añadir las siguientes líneas.
 
 **Añadir imagen 22**
 
@@ -98,9 +103,9 @@ Para ello, primero voy a crear un directorio dentro de la carpeta contenedora de
 
 Ahora necesitaremos instalar el paquete apache2-utils.
 
-**Añadir imagen 25**
+``` apt install apache2-utils ```
 
-En él podremos encontrar la herramienta .htpasswd.Ejecutamos el siguiente comando, para insertar en el archivo claves.txt un usuario con su contraseña cifrada.
+En él podremos encontrar la herramienta .htpasswd. Ejecutamos el siguiente comando, para insertar en el archivo claves.txt un usuario con su contraseña cifrada.
 
 **Añadir imagen 26**
 
@@ -108,7 +113,7 @@ Ahora editaremos el fichero de web1.conf para añadir las siguientes líneas.
 
 **Añadir imagen 27**
 
-Hacemos systemctl reload nginx
+Hacemos ```systemctl reload nginx```
 
 Cuando intentemos acceder desde un equipo que pueda acceder a la web de **wwww.web1.org**, al añadir a la dirección **/privado**, nos pedirá las credenciales.
 
@@ -128,7 +133,7 @@ Editamos el fichero web1.conf y añadimos las siguientes líneas.
 
 **Añadir imagen 32**
 
-Hacemos systemctl reload nginx
+Hacemos ```systemctl reload nginx```
 
 Ahora intentamos entrar dede la red pública.
 
@@ -142,7 +147,7 @@ Pero desde un equipo de la red interna, nos deja acceder directamente.
 
 Para ello, primero crearemos los certificados, en mi caso voy a usar **openssl**, ejecutamos el siguiente comando.
 
-**Añadir imagen 35**
+``` openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out nginx-certificate.crt -keyout nginx.key ```
 
 Añadimos todos los campos que nos piden. Una vez termine, se generarán 2 archivos. Esos archivos los metemos en alguna carpeta, en mi caso la siguiente.
 
@@ -152,14 +157,10 @@ Ahora, nos dirigimos al archivo web1.conf y lo editamos de la siguiente manera.
 
 **Añadir imagen 37**
 
-Si nos dirigimos al  navegador y colocamos https://www.web1.org , nos aparecerá de la siguiente manera.
+Si nos dirigimos al  navegador y colocamos ``` https://www.web1.org ```, nos aparecerá de la siguiente manera.
 
 **Añadir imagen 38**
 
 Y accederá a la página, en la cual si miramos los detalles del certificado, veremos los atributos que le hemos colocado a la hora de generarlo.
 
 **Añadir imagen 39**
-
-
-
-

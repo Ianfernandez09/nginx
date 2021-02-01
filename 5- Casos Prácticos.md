@@ -171,3 +171,12 @@ Si nos dirigimos al  navegador y colocamos ``` https://www.web1.org ```, nos apa
 Y accederá a la página, en la cual si miramos los detalles del certificado, veremos los atributos que le hemos colocado a la hora de generarlo.
 
 ![ssl4](https://i.imgur.com/LjFoHcs.png)
+
+## Extra: Redirección de HTTP a HTTPS
+
+Para ello modificamos el archivo **web1.conf** y añadimos la siguiente directiva.
+
+![redirect](https://i.imgur.com/eiK8I85.png)
+
+Y cuando accedamos desde el navegador a través de www.web1.org, nos redirigirá a https://www.web1.org.
+

@@ -158,7 +158,7 @@ Para ello, primero crearemos los certificados, en mi caso voy a usar **openssl**
 
 Añadimos todos los campos que nos piden. Una vez termine, se generarán 2 archivos. Esos archivos los metemos en alguna carpeta, en mi caso la siguiente.
 
-[ssl1](https://i.imgur.com/k3FJbe6.png)
+![ssl1](https://i.imgur.com/k3FJbe6.png)
 
 Ahora, nos dirigimos al archivo web1.conf y lo editamos de la siguiente manera.
 

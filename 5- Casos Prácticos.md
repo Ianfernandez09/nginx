@@ -62,7 +62,7 @@ Y luego otro para web2 llamado **web2.conf** con el siguiente contenido.
 
 ![web2](https://i.imgur.com/c1j2SKM.png)
 
-* La directiva server_name especifica el dominio al que asocia el sitio virtual.
+* La directiva **server_name** especifica el dominio al que asocia el sitio virtual.
 * La ruta del contenido web se indica en la directiva root.
 * En la directiva index especificamos los nombres de archivos que son considerados índice.
 * En el bloque Location aplicamos configuraciones concretas dentro de la ruta del contenido web. Con la directiva try fules indicamos que debe resolver la url como archivo, si falla como directorio y por ultimo con el error 404.

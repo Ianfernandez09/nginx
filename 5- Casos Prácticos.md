@@ -38,17 +38,17 @@ Misma dirección IP y puerto, distintos dominios.
 
 **1-** Creamos las carpetas donde se alojarán las páginas de cada uno.
 
-**Añadir imagen 9**
+![carpetas](https://i.imgur.com/bdolnqw.png)
 
 **2-** Creamos el index en cada una de las carpetas.
 
 ``` nano index.html ```
 
-**Añadir imagen 11**
+![web1](https://i.imgur.com/WqiBEhw.png)
 
 ``` nano index.html ```
 
-**Añadir imagen 13**
+![web2](https://i.imgur.com/NfAhwLn.png)
 
 **3-** Configuramos los nuevos sitios.
 
@@ -56,11 +56,11 @@ Para ello, nos dirigimos al directorio ```/etc/nginx/sites-available/```.
 
 Y creamos primero un archivo llamado **web1.conf** con el siguiente contenido.
 
-**Añadir imagen 14**
+![web1](https://i.imgur.com/gQwWJLx.png)
 
 Y luego otro para web2 llamado **web2.conf** con el siguiente contenido.
 
-**Añadir imagen 15**
+![web2](https://i.imgur.com/c1j2SKM.png)
 
 * La directiva server_name especifica el dominio al que asocia el sitio virtual.
 * La ruta del contenido web se indica en la directiva root.
@@ -70,15 +70,21 @@ Y luego otro para web2 llamado **web2.conf** con el siguiente contenido.
 
 Por último tenemos que crear un enlace simbólico dentro de sites-enabled para que los sitios se activen, ya que ahora mismo solo están disponibles.
 
-**Añadir imagen 16 y 17**
+![enlace](https://i.imgur.com/Q5G8whl.png)
+
+![enlace](https://i.imgur.com/hpdCatL.png)
 
 Y recargamos nginx.
 
-**Añadir imagen 18**
+```systemctl reload nginx```
 
 Ahora, desde un cliente configurando el archivo ```/etc/hosts``` (ya que estamos trabajando en entorno local), realizamos la comprobación desde el navegador.
 
-**Añadir imagen 19,20 y 21**
+![hosts](https://i.imgur.com/AqGy8i7.png)
+
+![web1](https://i.imgur.com/xXtq9VB.png)
+
+![web2](https://i.imgur.com/UmI6eA0.png)
 
 # Autenticación, Autorización y Control de Acceso
 
@@ -86,13 +92,13 @@ Ahora, desde un cliente configurando el archivo ```/etc/hosts``` (ya que estamos
 
 Para ello, me voy al archivo ```/etc/nginx/sites-available/web2.conf```, y en la directiva **location**, voy a añadir las siguientes líneas.
 
-**Añadir imagen 22**
+![web2](https://i.imgur.com/oPBwoKl.png)
 
 Luego de esto, realizamos un systemctl restart nginx
 
 Y ahora comprobamos desde 2 clientes, uno mediante la red que tiene acceso a internet y la otra que solo tiene acceso a la red local.
 
-**Añadir imagen 23**
+![comprobacion](https://i.imgur.com/EEYHC0e.png)
 
 Cliente01 tiene ip 192.168.3.x y cliente02 tiene ip 192.168.2.x
 
@@ -100,7 +106,7 @@ Cliente01 tiene ip 192.168.3.x y cliente02 tiene ip 192.168.2.x
 
 Para ello, primero voy a crear un directorio dentro de la carpeta contenedora de la página de web1.
 
-**Añadir imagen 24**
+![privado](https://i.imgur.com/fG2BNu0.png)
 
 Ahora necesitaremos instalar el paquete apache2-utils.
 
@@ -108,41 +114,41 @@ Ahora necesitaremos instalar el paquete apache2-utils.
 
 En él podremos encontrar la herramienta .htpasswd. Ejecutamos el siguiente comando, para insertar en el archivo claves.txt un usuario con su contraseña cifrada.
 
-**Añadir imagen 26**
+![clave](https://i.imgur.com/7jM8IOZ.png)
 
 Ahora editaremos el fichero de web1.conf para añadir las siguientes líneas.
 
-**Añadir imagen 27**
+![auth](https://i.imgur.com/P8VtCH1.png)
 
 Hacemos ```systemctl reload nginx```
 
 Cuando intentemos acceder desde un equipo que pueda acceder a la web de **wwww.web1.org**, al añadir a la dirección **/privado**, nos pedirá las credenciales.
 
-**Añadir imagen 28**
+![web1auth](https://i.imgur.com/CjPVCgB.png)
 
 Pero si no añadimos el usuario y contraseña adecuados, no nos dejará entrar y nos pedirá de nuevo la contraseña.
 
-**Añadir imagen 29**
-
 Si ponemos el usuario y la contraseña adecuada.
 
-**Añadir imagen 30 y 31**
+![auth](https://i.imgur.com/AWLgSfb.png)
+
+![entrada](https://i.imgur.com/74Qzv2m.png)
 
 ## A través de la red interna no pide autenticación para entrar a www.web1.org/privado, pero a través de la red pública sí.
 
 Editamos el fichero web1.conf y añadimos las siguientes líneas.
 
-**Añadir imagen 32**
+![fichero](https://i.imgur.com/FQylF2w.png)
 
 Hacemos ```systemctl reload nginx```
 
 Ahora intentamos entrar dede la red pública.
 
-**Añadir imagen 33**
+![publicauth](https://i.imgur.com/orrQ3IX.png)
 
 Pero desde un equipo de la red interna, nos deja acceder directamente.
 
-**Añadir imagen 34**
+![privateauth](https://i.imgur.com/wwYpeYW.png)
 
 ## Configurar el sitio virtual www.web1.org con acceso seguro
 
@@ -152,16 +158,16 @@ Para ello, primero crearemos los certificados, en mi caso voy a usar **openssl**
 
 Añadimos todos los campos que nos piden. Una vez termine, se generarán 2 archivos. Esos archivos los metemos en alguna carpeta, en mi caso la siguiente.
 
-**Añadir imagen 36**
+[ssl1](https://i.imgur.com/k3FJbe6.png)
 
 Ahora, nos dirigimos al archivo web1.conf y lo editamos de la siguiente manera.
 
-**Añadir imagen 37**
+![ssl2](https://i.imgur.com/OSCqQ1E.png)
 
 Si nos dirigimos al  navegador y colocamos ``` https://www.web1.org ```, nos aparecerá de la siguiente manera.
 
-**Añadir imagen 38**
+![ssl3](https://i.imgur.com/yFqkojd.png)
 
 Y accederá a la página, en la cual si miramos los detalles del certificado, veremos los atributos que le hemos colocado a la hora de generarlo.
 
-**Añadir imagen 39**
+![ssl4](https://i.imgur.com/LjFoHcs.png)

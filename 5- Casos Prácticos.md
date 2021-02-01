@@ -12,7 +12,7 @@
 
 Los ficheros de configuración se encuentran bajo la ruta ```/etc/nginx```, siendo el archivo de configuración principal ```/etc/nginx/nginx.conf```
 
-**Añadir imagen 5**
+![ficheros](https://i.imgur.com/LnX5BwW.png)
 
 En ```/etc/nginx/modules-enabled/``` se encuentran los archivos de los módulos que se desean configurar.
 
@@ -24,11 +24,11 @@ En ```/etc/nginx/conf.d/``` podemos encontrar archivos de configuración adicion
 
 La página web por defecto, podemos encontrarla en ```/var/www/html/```, donde podremos editar el archivo **index.html**.
 
-**Añadir imagen 6**
+![defecto](https://i.imgur.com/q9GtFyJ.png)
 
-**Añadir imagen 7**
+![index](https://i.imgur.com/r9flyPH.png)
 
-**Añadir imagen 8**
+![muestra](https://i.imgur.com/doYLk5q.png)
 
 # Virtual Hosting
 

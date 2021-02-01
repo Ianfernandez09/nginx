@@ -2,7 +2,7 @@
 
 # Versión de Nginx Instalado
 
-**Añadir imagen 4**
+![version](https://i.imgur.com/RXDhP3j.png)
 
 # Servicio asociado
 

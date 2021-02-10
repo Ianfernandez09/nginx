@@ -10,4 +10,4 @@
 
 ## 5.- [Casos prácticos](https://github.com/Ianfernandez09/nginx/blob/main/5-%20Casos%20Prácticos.md)
 
-## 6.- [Referencias]()
+## 6.- [Referencias](https://nginx.org/en/docs/)
